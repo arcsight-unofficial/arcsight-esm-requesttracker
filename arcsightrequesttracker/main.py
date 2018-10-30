@@ -8,6 +8,7 @@ import argparse
 import ConfigParser
 import requesttracker as rt
 import arcsightesm as esm
+import pprint
 
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -67,7 +68,7 @@ def arguments():
             for k, v in payload.items():
                 content += "{}: {}\n".format(k, v)
             print("This is the event")
-            print(event)
+            pprint.pprint(event)
     else:
         print("You have not included all mandatory parameters, remember to include action, template and eventid")
 
