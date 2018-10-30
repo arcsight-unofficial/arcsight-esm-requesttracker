@@ -460,6 +460,7 @@ Fill in the correct information related to your environment:
 * Action Type - How it should execute
 
 Here is an example of how it would look like:
+
 ![executecommand](https://i.imgur.com/AslpAGR.png)
 
 Try to trigger the rule to ensure that the ticket is created in the end.
@@ -475,11 +476,11 @@ If all requirements like python and such is installed, create a new integration 
 ![manualexecute](https://i.imgur.com/sCKXE8l.png)
 
 
-### But what if i don't want to install things on my management server?
-Then it's time to be creative, here are some pointers that will push you in the right direction:
+### But what if i don't want to install things on my management/jumpserver?
+If you want to keep all scripts to the ESM server only then it's time to be creative, here are some pointers that will push you in the right direction:
 Integration commands creates an internal event called "integrationcommand:101", you can create an empty integration command and a rule that triggers on this activity to still run the script from the server itself.
 
-Another option is CounterACT connectors as a destination for your integration command target.
+Another option is CounterACT connectors as a destination for your integration command target, and storing the script on that connector instead, this can be handy in cases like having internet access for github cloning etc, but not giving the ESM server internet access directly.
 
 
 ## Troubleshooting
