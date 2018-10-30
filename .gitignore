@@ -1,7 +1,7 @@
 
 ### Exclude config files ###
-config/script.conf
-templates/template.conf
+arcsightrequesttracker/config/script.conf
+arcsightrequesttracker/templates/template.conf
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
