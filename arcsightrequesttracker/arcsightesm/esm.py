@@ -4,12 +4,15 @@
 All API calls made to ArcSight ESM
 """
 
+import os
 import ConfigParser
 import json
 import requests
 
+CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
+ROOT_DIR = os.path.dirname(CURRENT_DIR)
 CONFIG_FILE = ConfigParser.ConfigParser()
-CONFIG_FILE.read('./script.conf')
+CONFIG_FILE.read(os.path.join(ROOT_DIR, 'config', 'script.conf'))
 
 # RT Configuration
 ARCSIGHT_USERNAME = CONFIG_FILE.get('arcsightesm', 'username')

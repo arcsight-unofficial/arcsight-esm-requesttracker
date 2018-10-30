@@ -3,10 +3,13 @@
 
 Making it possible to create tickets in Request Tracker from ArcSight ESM
 """
+import os
 import argparse
 import ConfigParser
 import requesttracker as rt
 import arcsightesm as esm
+
+ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 
 def arguments():
@@ -19,9 +22,9 @@ def arguments():
     config_file.optionxform = str
 
     parser = argparse.ArgumentParser()
-    parser.add_argument("--action", help="What action you want, can either be \"new\" or \"test\", other actions added later")
-    parser.add_argument("--eventid", help="EventID in ArcSight")
-    parser.add_argument("--ticketid", help="ID of the RT Ticket")
+    parser.add_argument('--action', help='What action you want, can either be \"new\" or \"test\", other actions added later')
+    parser.add_argument('--eventid', help='EventID in ArcSight')
+    parser.add_argument('--ticketid', help='ID of the RT Ticket')
     parser.add_argument('--template', help='Which template to use to map ArcSight data to ticket')
     parser.add_argument('--test', help='Test against an specific EventID to see what data it returns')
     args = parser.parse_args()
@@ -30,7 +33,7 @@ def arguments():
         content = ""
         authtoken = esm.login()
         event = esm.get_event(authtoken, args.eventid)
-        config_file.read("./template.conf")
+        config_file.read(os.path.join(ROOT_DIR, '/templates/', 'template.conf'))
         payload = {}
         if args.action == 'new':
             for key, values in config_file.items(args.template):

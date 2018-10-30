@@ -1,4 +1,7 @@
-# Created by https://www.gitignore.io/api/python
+
+### Exclude config files ###
+config/script.conf
+templates/template.conf
 
 ### Python ###
 # Byte-compiled / optimized / DLL files

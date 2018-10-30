@@ -4,11 +4,14 @@
 All API calls made to Request Tracker
 """
 
+import os
 import ConfigParser
 import requests
 
+CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
+ROOT_DIR = os.path.dirname(CURRENT_DIR)
 CONFIG_FILE = ConfigParser.ConfigParser()
-CONFIG_FILE.read('./script.conf')
+CONFIG_FILE.read(os.path.join(ROOT_DIR, 'config', 'script.conf'))
 
 RT_USERNAME = CONFIG_FILE.get('requesttracker', 'username')
 RT_PASSWORD = CONFIG_FILE.get('requesttracker', 'password')
