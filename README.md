@@ -37,10 +37,10 @@ $ sudo apt-get install python-requests
 ### Downloading the application
 Download the required package directly from github, either from cli using:
 ```sh
-$ git clone https://github.com/P1llus/arcsight-esm-requesttracker
+$ git clone https://github.com/arcsight-unofficial/arcsight-esm-requesttracker
 ```
 Or if you do not have internet access or proxy connection on the ESM server, download the newest release and move it to the ESM through SCP/RDP
-[Releases can be found here](https://github.com/P1llus/arcsight-esm-requesttracker/releases)
+[Releases can be found here](https://github.com/arcsight-unofficial/arcsight-esm-requesttracker/releases)
 
 
 ### Placing the application on your server
@@ -501,4 +501,4 @@ If you find any bugs that you want to report, please create a github issue inclu
 ## Contributing
 If you spot errors or parts that needs improvements, feel free to create a fork and a Pull Request with additional changes.
 If you want to contribute but do not know what to work on, feel free to look at the TODO list at the top or currently open issues.
-All code should pass PEP-8 and flake linting beforehand, certain exceptions are allowed, but try to keep it consistent
+All code should pass PEP-8 and flake linting beforehand, certain exceptions are allowed, but try to keep it consistent.
