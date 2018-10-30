@@ -33,7 +33,7 @@ def arguments():
         content = ""
         authtoken = esm.login()
         event = esm.get_event(authtoken, args.eventid)
-        config_file.read(os.path.join(ROOT_DIR, '/templates/', 'template.conf'))
+        config_file.read(os.path.join(ROOT_DIR, 'templates', 'template.conf'))
         payload = {}
         if args.action == 'new':
             for key, values in config_file.items(args.template):
