@@ -1,6 +1,6 @@
 # ArcSight ESM Request Tracker integration
 
-This application is used to automatically create and update tickets in ([Request Tracker](https://bestpractical.com/request-tracker/)) from ArcSight ESM.
+This application is used to automatically create and update tickets in [Request Tracker](https://bestpractical.com/request-tracker/) from ArcSight ESM.
 
 Current status: Working as intended but being improved
 
@@ -12,10 +12,11 @@ While the application works as intended, there is several parts that could be ma
 * Better templating, or support for multiple template files
 * Better Error checking on API requests
 * Debug mode
+* Better README format, better explanations and proof reading
 
 
 ## Requirements
-Outside of python version 2.7 or 3.x this application requires python-requests for it's API requests, for more information or support please look at their guide ([here](http://docs.python-requests.org/en/master/)) for more information.
+Outside of python version 2.7 or 3.x this application requires python-requests for it's API requests, for more information or support please look at their guide [here](http://docs.python-requests.org/en/master/) for more information.
 
 If you are not experienced with either python or pip/easy_install i would recommend just installing the current available version from your repository (apt/yum) like so:
 
@@ -39,7 +40,7 @@ Download the required package directly from github, either from cli using:
 $ git clone https://github.com/P1llus/arcsight-esm-requesttracker
 ```
 Or if you do not have internet access or proxy connection on the ESM server, download the newest release and move it to the ESM through SCP/RDP
-([Releases can be found here](https://github.com/P1llus/arcsight-esm-requesttracker/releases))
+[Releases can be found here](https://github.com/P1llus/arcsight-esm-requesttracker/releases)
 
 
 ### Placing the application on your server
@@ -114,6 +115,15 @@ CF-DestinationIP=arcsight/destination/address
 CF-Virus=arcsight/deviceCustomString1
 ```
 
+## Upgrading the script when new versions are released
+If a bug has been reported as fixed, you can get the newest version of the script in two ways.
+
+If you cloned the github repository just run this command:
+```sh
+$ cd /opt/scripts/requesttracker/
+$ git pull
+```
+If you downloaded the file manually, you will need to download the newest release and overwrite the files and folders. Since no configuration files are included, you will keep your initial configuration.
 
 ## Running the script
 
@@ -128,7 +138,7 @@ $ python main.py --action test --eventid 123123 --template Bruteforce
 
 The output from this should be printing out all details available about the event, example below:
 
-```json
+```
 {u'agent': {u'address': 3232236066,
             u'addressAsBytes': u'wKgCIg==',
             u'assetId': u'47tkbyWQBABCAWGckpuf3CQ==',
@@ -406,7 +416,7 @@ It is possible to map information from the original correlated event triggered b
 
 
 As you can see from the event example, certain information are "nested", example the URI of an original agent:
-```json
+```
 u'originalAgent': {u'address': 3232236066,
                     u'addressAsBytes': u'wKgCIg==',
                     u'assetId': u'47tkbyWQBABCAWGckpuf3CQ==',
@@ -450,7 +460,7 @@ Fill in the correct information related to your environment:
 * Action Type - How it should execute
 
 Here is an example of how it would look like:
-![executecommand](https://imgur.com/AslpAGR)
+![executecommand](https://i.imgur.com/AslpAGR.png)
 
 Try to trigger the rule to ensure that the ticket is created in the end.
 
@@ -462,7 +472,7 @@ This varies a bit from version to version, so if there is any issues creating in
 This command runs from the your own local machine where the client is installed, which means that the server or client used to access the ESM would need all the requirements specified at the start of the documentation.
 If all requirements like python and such is installed, create a new integration command and fill in the same parameters as when creating an automatic rule:
 
-![manualexecute](https://imgur.com/a/667SCdb)
+![manualexecute](https://i.imgur.com/sCKXE8l.png)
 
 
 ### But what if i don't want to install things on my management server?
