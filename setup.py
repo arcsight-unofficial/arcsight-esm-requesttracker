@@ -7,5 +7,5 @@ setup(name='arcsightrequesttracker',
       author='Marius Iversen',
       author_email='marius@chasenet.org',
       url='https://github.com/P1llus/arcsight-esm-requesttracker',
-      packages=['arcsightesm', 'requesttracker'],
+      packages=['arcsightrequesttracker.arcsightesm', 'arcsightrequesttracker.requesttracker'],
 )
