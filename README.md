@@ -64,7 +64,7 @@ $ python setup.py install --user
 Copy the configuration file and removing the "example" part in the name, continue to fill out all revelant information like username, password and URL/Hostname of ESM and RT.
 
 ```sh
-$ cp /opt/scripts/requesttracker/arcsightrequesttracker/config/script.example.conf /opt/scripts/requesttracker/config/script.conf
+$ cp /opt/scripts/requesttracker/arcsightrequesttracker/config/script.example.conf /opt/scripts/requesttracker/arcsightrequesttracker/config/script.conf
 $ vi /opt/scripts/requesttracker/arcsightrequesttracker/config/script.conf
 ```
 
@@ -73,7 +73,7 @@ $ vi /opt/scripts/requesttracker/arcsightrequesttracker/config/script.conf
 Make a copy of the example template, and remove the "example" part of the filename
 
 ```sh
-$ cp /opt/scripts/requesttracker/arcsightrequesttracker/templates/template.example.conf /opt/scripts/requesttracker/templates/template.conf
+$ cp /opt/scripts/requesttracker/arcsightrequesttracker/templates/template.example.conf /opt/scripts/requesttracker/arcsightrequesttracker/templates/template.conf
 $ vi /opt/scripts/requesttracker/arcsightrequesttracker/templates/template.conf
 ```
 
